@@ -1,0 +1,16 @@
+
+<script>
+
+var texto = prompt("Escribe tu mensaje a encriptar");
+const textoFormateado = texto.replaceAll(/[aeiou]/g, function(encriptar){
+    if(encriptar == 'a'){return 'ai'}
+    if(encriptar == 'e'){return 'enter'}
+    if(encriptar == 'i'){return 'imes'} 
+    if(encriptar == 'o'){return 'ober'}
+})
+
+console.log(texto);
+console.log(textoFormateado);
+
+
+</script>

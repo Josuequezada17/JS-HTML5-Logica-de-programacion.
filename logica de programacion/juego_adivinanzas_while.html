@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>Adivinanzas locas</h1>
+
+<script>
+
+    function cout(frase){
+        document.write("<big>" + frase + "<br>" + "</big>");
+    }
+
+    function doubleJump(){
+        document.write("<br><br>");
+    }
+    function random(n){
+        return Math.round(Math.random()*n);
+    }
+
+    var numeroPro = Math.round(Math.random()*10);
+    var counter = 0;
+    var intentos = 5;
+
+    while(counter <= intentos){
+    var intento = parseInt(prompt(", Ingresa un numero entre 0 y 10"));
+  
+    if(intento == numeroPro ){
+        alert("Lo lograste!!!, en " + counter + " intentos el numero era " + numeroPro);
+        break;
+    }else{
+        alert("Eres un pendejo");
+    }
+    counter++;
+    }
+
+    if(intento == numeroPro ){
+        cout("Lo lograste!!!, en " + counter + " intentos el numero era " + numeroPro);
+        counter = 5;
+    }else{
+        cout("Eres un pendejo el numero era " + numeroPro);
+    }
+</script>

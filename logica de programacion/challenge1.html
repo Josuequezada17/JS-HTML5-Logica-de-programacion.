@@ -1,0 +1,168 @@
+<meta charset="UTF-8">
+
+<html>
+
+    <body>
+        
+        <input type="text" id="inputTexto">
+        <button onclick="reemplazar()">Reemplazar</button>
+
+
+    </body>
+
+
+</html>
+
+<script>
+
+        
+function reemplazar() {
+  // Obtener el valor del input
+  let texto = document.getElementById("inputTexto").value;
+
+  // Definir los caracteres a reemplazar y sus correspondientes reemplazos
+  const caracteresReemplazo = ["a", "e", "i", "o", "u"];
+  const reemplazos = ["ai", "enter", "imes", "ober", "ufat"];
+
+  // Recorrer cada letra en el texto y reemplazarla si es necesario
+  let nuevoTexto = "";
+  for (let i = 0; i < texto.length; i++) {
+
+    let letra = texto[i];
+
+    if(texto[i] == "a" || texto[i == "e"]){
+        nuevoTexto = texto.replace("a", "ai");
+        //nuevoTexto = texto.replace("e", "enter");
+        console.log(nuevoTexto);
+    }
+    /*else if(texto[i] == "e"){
+        nuevoTexto = texto.replace("e", "enter");
+        console.log(nuevoTexto);
+    }*/
+
+   /* let indice = caracteresReemplazo.indexOf(letra);
+    if (indice !== -1) {
+      nuevoTexto += reemplazos[indice];
+    } else {
+      nuevoTexto += letra;
+    }*/
+  }
+
+  // Mostrar el texto modificado
+    alert(nuevoTexto);
+}
+
+
+    
+
+/* function reemplazar() {
+    // Obtener el valor del input
+    let texto = document.getElementById("inputTexto").value;
+
+    let nuevoMensaje = "";
+
+    for(let i = 0; i < texto.lentgh; i++){
+        let encriptado = texto[i];
+
+        switch(encriptado){
+            case "a": 
+                nuevoMensaje += "ai";
+                break;
+            case "e": 
+                nuevoMensaje += "enter";
+                break;
+            case "i": 
+                nuevoMensaje += "imes";
+                break;
+            case "o": 
+                nuevoMensaje += "ober";
+                break;
+            case "u": 
+                nuevoMensaje += "ufar";
+                break;
+        }
+        nuevoMensaje += encriptado;
+    }
+
+    alert(nuevoMensaje);
+
+    }
+    
+    
+    function reemplazar() {
+    // Obtener el valor del input
+    let texto = document.getElementById("inputTexto").value;
+
+    // Reemplazar los caracteres específicos
+    texto = texto.replace(a, "ai");
+    texto = texto.replace(e, "enter");
+    texto = texto.replace(i, "imes");
+    texto = texto.replace(o, "ober");
+
+    // Mostrar el texto modificado
+    alert(texto);
+    }
+
+
+    let mensaje = prompt("Ingresa el mensaje a encriptas");
+    
+    for(var i = 0; i < mensaje.length; i++){
+            var encriptar ="";
+            
+
+                encriptar = mensaje[i].replace(/a/g,"bebe");
+
+        }
+
+        console.log(encriptar);
+        document.write(encriptar);
+
+    
+
+      const alumnos = document.querySelectorAll(".info-telefono");
+
+  for (let indice = 0; indice < alumnos.length; indice++) {
+    const nuevoTelefono = alumnos[indice].textContent.replace(-,'');
+    alumnos[indice].textContent = nuevoTelefono;
+}
+
+
+document.write(mensaje);
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function cout(frase) {
+        document.write("<big>" + frase+ "<br></big>");
+    }
+
+    function randomMix(maximo){
+        var arreglo = [""];
+        for(let i = 0; i< maximo; i++ ){
+            arreglo[i] += Math.round(Math.random()*maximo);
+        } 
+        return arreglo;        
+    }
+
+
+    function encriptar(){
+        const encript = randomMix(contraseha.length);
+
+        for(let i = 0; i < contraseha.length; i++){
+            document.write(encript);
+
+        }
+    }
+    
+    var contraseha = [prompt("Ingrese su contraseña")];
+    for(var i = 0; i<contraseha.length; i++){
+        cout(contraseha[i]);
+    }
+
+    encriptar();
+
+    //var button = document.querySelector("button");
+    //button.onclick = encriptar();
+*/
+
+</script>

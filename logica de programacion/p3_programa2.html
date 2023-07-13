@@ -1,0 +1,25 @@
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+
+    function drawGreenCube(x){
+    const screen = document.querySelector("canvas");
+    const pincel = screen.getContext("2d");
+
+    pincel.fillStyle = "green"; //Propiedad
+    pincel.fillRect(x,0,50,50); //Fucnion
+    pincel.strokeStyle = "black"; //Propiedad, lineas
+    pincel.strokeRect(x,0,50,50); //Funcion, lineas
+
+    }
+
+
+    const times = parseInt(prompt("Ingresa el numero de cubos"));
+
+    for(var i = 0;i < times; i++){
+    x = 50 * i;
+    drawGreenCube(x);
+    }
+    
+
+</script>

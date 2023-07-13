@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA MEDIA DE EDADES DE UNA FAMILIA</h1>
+
+<script>
+
+    function doubleJump() {
+        document.write("<br><br>");
+    }
+
+    function cout(frase) {
+        document.write("<big>" + frase+ "<br></big>");
+    }
+
+    var numero = parseInt(prompt("Ingrese el numero de integrantes en tu familia"));
+    var counter = 1;
+    var operacion = 0;
+
+    while(counter <= numero){
+        var edades = parseInt(prompt("Ingresa la edad"));
+        counter++;
+        operacion += edades;
+    }
+
+    var result = operacion/numero;
+
+    cout("El promedio de las edades ingresadas es " + result);
+
+    doubleJump();
+
+    cout("Ahora con for");
+
+    var operacionFor = 0;
+    for(counter = 1; counter <= numero; counter++){
+        var edadesFor = parseInt(prompt("Ingresa la edad para el ciclo for"));
+        operacionFor += edadesFor
+    }
+
+    var resultFor = operacionFor/numero;
+
+    cout("El promedio de las edades ingresadas es " + resultFor);
+    
+
+</script>

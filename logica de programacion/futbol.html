@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - Para calcular los puntos de un equipo de futbol</h1>
+
+<script>
+
+    function cout(frase){
+        document.write("<big>" + frase + "<br>" + "</big>");
+    }
+
+    function doubleJump(){
+        document.write("<br><br>");
+    }
+
+    var wins = parseInt(prompt("Cantidad de victorias"));
+    var empate = parseInt(prompt("Cantidad de empates"));
+    var auxTotal;
+
+    auxTotal = ((wins * 3) + empate);
+
+    cout("El total de puntos del equipo es: " + auxTotal);
+        
+    if(auxTotal > 28){
+        cout("El equipo esta mejor que el año pasado");
+    }
+    if(auxTotal < 28){
+        cout("El equipo esta peor que el año pasado");
+    }
+    if(auxTotal == 28){
+        cout("El equipo esta igual que el año pasado");
+    }
+    
+
+</script>

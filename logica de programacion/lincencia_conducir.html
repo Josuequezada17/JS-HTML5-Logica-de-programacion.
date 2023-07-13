@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h1>Señor justicia</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function cout(frase) {
+        document.write("<big>" + frase+ "<br></big>");
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if(edad >= 18 && (tieneLicencia == 'S' || tieneLicencia == 's')){
+        cout("Puedes conducir");
+    }else{
+        cout("Mamaste, las manos en el volante");
+    }
+
+</script>

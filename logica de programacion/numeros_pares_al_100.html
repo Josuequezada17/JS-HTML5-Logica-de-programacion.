@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA NUMEROS PARES DEL 0 AL 100</h1>
+
+<script>
+
+    function doubleJump() {
+        document.write("<br><br>");
+    }
+
+    function cout(frase) {
+        document.write("<big>" + frase+ "<br></big>");
+    }
+
+    var numero = 100
+    var counter = 2;
+    var index = 1;
+
+    cout(index + ": " + index);
+    while(counter <= numero){
+        cout(index + ": " + counter);
+        counter += 2;
+        index++;
+    }
+
+</script>

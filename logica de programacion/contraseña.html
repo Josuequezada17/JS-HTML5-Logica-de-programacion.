@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<h1>LOGIN</h1>
+
+<script>
+
+    function cout(frase){
+        document.write("<big>" + frase + "<br>" + "</big>");
+    }
+
+    function doubleJump(){
+        document.write("<br><br>");
+    }
+
+    var loginRegister = "alura";
+    var passwordRegister = "alura321";
+    var counter = 1;
+
+    while(counter <= 3){
+        var loginTried = prompt("Ingrese su usuario");
+        var passwordTried = prompt("Ingrese su contraseña");
+                
+        if( loginRegister == loginTried && passwordRegister == passwordTried) {
+        alert("Bienvenido al sistema " + loginRegister);
+        break;
+        } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo");
+    }
+       counter++; 
+    }
+
+    if(loginRegister != loginTried && passwordRegister != passwordTried){
+    alert("Acceso bloqueado!");
+    }
+ 
+</script>

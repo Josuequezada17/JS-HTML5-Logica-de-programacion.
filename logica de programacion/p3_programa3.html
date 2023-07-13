@@ -1,0 +1,21 @@
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+
+    const screen = document.querySelector("canvas");
+    const pincel = screen.getContext("2d");
+
+    pincel.fillStyle = "grey"; //Propiedad
+    pincel.fillRect(0,0,600,400);
+
+
+    function click(evento){
+    console.log(evento);
+    alert("Usted hizo un click"); 
+
+    }
+
+    screen.onclick = click;
+
+
+</script>

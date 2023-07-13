@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<h1>IMC</h1>
+
+<script>
+
+    function cout(frase){
+        document.write("<big>" + frase + "<br>" + "</big>");
+    }
+
+    function doubleJump(){
+        document.write("<br><br>");
+    }
+
+    function calcularImc(peso, altura){
+          return peso / (altura * altura);
+
+    }
+
+    var myNombre = prompt("Ingrese su nombre");
+    var myPeso = parseInt(prompt(myNombre + ", Ingrese su peso"));
+    var myAltura = parseFloat(prompt(myNombre + ", Ingrese su altura"));
+
+    var imc = calcularImc(myPeso, myAltura);
+
+    cout(myNombre + " su IMC calculado es: " + imc );
+    doubleJump();
+
+    if(imc < 18.5){
+        cout("Su IMC esta por debajo de lo recomendado");
+    }
+    if(imc >= 18.5 && imc <= 24.9){
+        cout("Su IMC esta en un intervalo recomendado");
+    }
+    if(imc >= 25 && imc <30){
+        cout("Usted tiene sobrepeso");
+    }
+    if(imc >= 30){
+        cout("Usted tiene obesidad");
+    }
+    
+    
+
+</script>

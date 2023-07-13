@@ -1,0 +1,45 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+
+    function escribirTexto(x , y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font="15px Georgia";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y);    
+    }
+
+function dibujarBarra(x, y, serie, colores,texto,año) {
+        escribirTexto(x+10,y-20,año);    
+        for(var i = 0; i<serie.length; i++){
+            dibujarRectangulo(x,y,100,serie[i]*2,colores[i]);
+            escribirTexto(x+100,y+8,texto[i]);
+            y += serie[i]*2;
+        }
+
+    }
+
+    var serie2009 = [6, 47, 41, 3, 3];
+    var serie2019 = [81, 9, 3, 3, 4];
+
+    var colores = ["blue","green","yellow", "red","gray"];
+    var textos = ["chrome","firefox","internet explorer","safari","otros"];
+
+    dibujarBarra(30,50,serie2009,colores,textos,"Año 2009");
+    dibujarBarra(300,50,serie2019,colores,textos,"Año 2019");
+
+</script>
+
+</script>
